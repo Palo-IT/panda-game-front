@@ -8,27 +8,32 @@
  *
  * Main module of the application.
  */
-angular
-  .module('pandaGameFrontApp', [
+var app = angular.module('pandaGameFrontApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+
+app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'views/main.html',
+            templateUrl: 'views/home.html',
             controller: 'HomeCtrl'
         })
         .when('/users', {
-            templateUrl: 'views/user.html',
+            templateUrl: 'views/user/list.html',
+            controller: 'UserCtrl'
+        })
+        .when('/users/:usernameCanonical', {
+            templateUrl: 'views/user/read.html',
             controller: 'UserCtrl'
         })
         .when('/scores', {
-            templateUrl: 'views/score.html',
+            templateUrl: 'views/score/list.html',
             controller: 'ScoreCtrl'
         })
         .when('/contact', {

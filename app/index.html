@@ -23,8 +23,17 @@
     <!-- Add your site or application content here -->
     <div class="container">
         <div class="header">
+            <h1>
+                <img src="" alt="" />Panda Game
+            </h1>
+
+            <h3>
+                Save a Panda at a time
+            </h3>
+
             <ul class="nav nav-pills pull-right">
                 <li class="active"><a ng-href="#">Home</a></li>
+                <li><a ng-href="#/play">Play !</a></li>
                 <li><a ng-href="#/users">Users</a></li>
                 <li><a ng-href="#/scores">Scores</a></li>
                 <li><a ng-href="#/contact">Contact</a></li>
@@ -38,7 +47,24 @@
         <div ng-view=""></div>
 
         <div class="footer">
-
+            <ul>
+                <li>
+                    <a href="#" title="About us">
+                        The project</a>
+                </li>
+                <li>
+                    <a href="#" title="About us">
+                        About us</a>
+                </li>
+                <li>
+                    <a href="#" title="Terms & Policies">
+                        Terms & Policies</a>
+                </li>
+                <li>
+                    <a href="http://palo-it.com" title="Palo IT, Innovation accelerator">
+                        Powered by Palo IT</a>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -94,8 +120,11 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/user.js"></script>
+    <script src="scripts/controllers/score.js"></script>
+    <script src="scripts/controllers/contact.js"></script>
     <!-- endbuild -->
 </body>
 </html>

@@ -7,11 +7,38 @@
  * # UserCtrl
  * Controller of the pandaGameFrontApp
  */
-angular.module('pandaGameFrontApp')
-    .controller('UserCtrl', function ($scope) {
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
-    });
+app.controller('UserCtrl', ['$scope', '$routeParams', '$http', function ($scope, routeParams, $http) {
+    $scope.awesomeThings = [
+        'HTML5 Boilerplate',
+        'AngularJS',
+        'Karma'
+    ];
+
+    $scope.list = function() {
+        $http.get('http://dev.panda-game.fr/api/users').success(function(data) {
+            $scope.users = data;
+        }).error(function(data, status, headers) {
+            console.log(status);
+            console.log(headers);
+        });
+    };
+
+    $scope.read = function() {
+        $http.get('http://dev.panda-game.fr/api/users/' + routeParams.usernameCanonical).success(function(data) {
+            $scope.user = data;
+        }).error(function(data, status, headers) {
+            console.log(status);
+            console.log(headers);
+        });
+
+        //TODO: Develop API side first
+        /*
+        $http.get('http://dev.panda-game.fr/api/users/' + routeParams.usernameCanonical + '/scores').success(function(data) {
+            $scope.scores = data;
+        }).error(function(data, status, headers) {
+            console.log(status);
+            console.log(headers);
+        });
+        */
+    };
+}]);
