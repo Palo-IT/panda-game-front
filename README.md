@@ -5,7 +5,7 @@ Front end angular for Rest API
 TODO:
 - Use template inheritance to avoid code duplication
 - How not to register each JS ?
-- Unitary tests & integration server (on Palo IT forge ?)
+- Unitary tests using Karma
 - Basic graphic integration with bootstrap
 - Game development (using web sockets) => has to be playable with or without a smartphone (see Ruthless Spartans vs. Cuddly Hipsters)
 - Register via Rest API

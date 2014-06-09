@@ -7,7 +7,7 @@
  * # ScoreCtrl
  * Controller of the pandaGameFrontApp
  */
-app.controller('ScoreCtrl', ['$scope', '$http',  function ($scope) {
+app.controller('ScoreCtrl', ['$scope', '$http',  function ($scope, $http) {
     $scope.awesomeThings = [
         'HTML5 Boilerplate',
         'AngularJS',

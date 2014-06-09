@@ -14,7 +14,8 @@ var app = angular.module('pandaGameFrontApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ]);
 
 
@@ -48,3 +49,4 @@ app.config(function ($routeProvider) {
             redirectTo: '/'
         });
   });
+

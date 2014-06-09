@@ -1,5 +1,5 @@
 <section id='content' ng-controller='UserCtrl' ng-init="read()">
-    <ul>
+    <ul class="list-inline">
         <li>
             <a href="#users" title="Back to the List">
                 Back to the List</a>
@@ -14,65 +14,26 @@
         </li>
     </ul>
 
-    <ul>
-        <li>
-            <a href="#profile" title="Profile">
-                Profile</a>
-        </li>
-
-        <li>
-            <a href="#best-scores" title="Best Score">
-                Best Score</a>
-        </li>
-    </ul>
-
     <h3>
         <img src="{{user.avatar}}" alt="avatar" />
         {{user.username}}
     </h3>
 
-    <section id="profile">
-        <span>{{user.email}}</span>
+    <tabset>
+        <tab>
+            <tab-heading>Profile</tab-heading>
 
-        <span>Récompenses ? médailles ?</span>
-    </section>
+            <section>
+                <span>{{user.email}}</span>
 
-    <section id="best-scores">
-        <table>
-            <thead>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
+                <span>Récompenses ? médailles ?</span>
+            </section>
+        </tab>
 
-            <tbody>
-            <tr ng-repeat="score in scores | filter:search">
-                <td>
-                    <a href="#users/{{score.user.username_canonical}}/scores" title="User Score history">
-                        <img src="{{score.user.avatar}}" alt="avatar" />
-                        {{user.username}}</a>
-                </td>
+        <tab>
+            <tab-heading>Best Scores</tab-heading>
 
-                <td>
-                    {{score.result}}
-                </td>
-
-                <td>
-                    {{score.creation}}
-                </td>
-            </tr>
-            </tbody>
-
-            <tfoot>
-            <tr>
-                <td></td>
-            </tr>
-            </tfoot>
-        </table>
-    </section>
-
-
-
+            <section ng-include src="'/views/score/components/results.html'"></section>
+        </tab>
+    </tabset>
 </section>
