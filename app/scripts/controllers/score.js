@@ -17,6 +17,7 @@ app.controller('ScoreCtrl', ['$scope', '$http',  function ($scope, $http) {
     $scope.list = function() {
         $http.get('http://dev.panda-game.fr/api/scores').success(function(data) {
             $scope.scores = data;
+            $scope.displayUser = true;
         }).error(function(data, status, headers) {
             console.log(status);
             console.log(headers);

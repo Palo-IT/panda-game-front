@@ -1,7 +1,7 @@
 <table>
     <thead>
     <tr>
-        <th>User</th>
+        <th ng-if="{{ displayUser }}">User</th>
         <th>Score</th>
         <th>Date</th>
     </tr>
@@ -9,7 +9,7 @@
 
     <tbody>
     <tr ng-repeat="score in scores | filter:search">
-        <td>
+        <td ng-if="{{ displayUser }}">
             <a href="#users/{{score.user.username_canonical}}/scores" title="User Score history">
                 <img src="{{score.user.avatar}}" alt="avatar" />
                 {{user.username}}</a>
@@ -20,7 +20,7 @@
         </td>
 
         <td>
-            {{score.creation}}
+            {{score.creation | date : 'dd/MM/yyyy HH:mm'}}
         </td>
     </tr>
     </tbody>

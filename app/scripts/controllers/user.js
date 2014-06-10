@@ -31,14 +31,12 @@ app.controller('UserCtrl', ['$scope', '$routeParams', '$http', function ($scope,
             console.log(headers);
         });
 
-        //TODO: Develop API side first then open this
-        /*
         $http.get('http://dev.panda-game.fr/api/users/' + routeParams.usernameCanonical + '/scores').success(function(data) {
             $scope.scores = data;
+            $scope.displayUser = false;
         }).error(function(data, status, headers) {
             console.log(status);
             console.log(headers);
         });
-        */
     };
 }]);
