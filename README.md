@@ -15,3 +15,4 @@ TODO:
 - Like the ONG and the game on Social Network
 - Contact form
 - Back office (users, contact list, social icons destination, logo, color themes, highlight content) ?
+- Mise en place de http://bttrlazyloading.julienrenaux.fr/ pour le chargement asynchrone des images.
