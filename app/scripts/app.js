@@ -25,6 +25,10 @@ app.config(function ($routeProvider) {
             templateUrl: 'views/home.html',
             controller: 'HomeCtrl'
         })
+        .when('/play', {
+            templateUrl: 'views/play/index.html',
+            controller: 'PlayCtrl'
+        })
         .when('/users', {
             templateUrl: 'views/user/list.html',
             controller: 'UserCtrl'
@@ -36,6 +40,10 @@ app.config(function ($routeProvider) {
         .when('/scores', {
             templateUrl: 'views/score/list.html',
             controller: 'ScoreCtrl'
+        })
+        .when('/about', {
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl'
         })
         .when('/contact', {
             templateUrl: 'views/contact.html',

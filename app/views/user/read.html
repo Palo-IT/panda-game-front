@@ -1,39 +1,49 @@
-<section id='content' ng-controller='UserCtrl' ng-init="read()">
-    <ul class="list-inline">
-        <li>
-            <a href="#users" title="Back to the List">
-                Back to the List</a>
-        </li>
-        <li>
-            <a href="#users/{{user.username_canonical}}/edit" title="Edit">
-                Edit</a>
-        </li>
-        <li>
-            <a href="#users/{{user.username_canonical}}/delete" title="Delete">
-                Delete</a>
-        </li>
-    </ul>
+<div ng-controller='UserCtrl' ng-init="read()">
+    <!-- *****************************************************************************************************************
+         BLUE WRAP
+         ***************************************************************************************************************** -->
+    <div id="blue">
+        <div class="container">
+            <div class="row">
+                <h3>{{user.username}}</h3>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /blue -->
 
-    <h3>
+    <section id="page-content" class="container">
+        <ul class="list-inline">
+            <li>
+                <a href="#users" title="Back to the List">
+                    Back to the List</a>
+            </li>
+            <li>
+                <a href="#users/{{user.username_canonical}}/edit" title="Edit">
+                    Edit</a>
+            </li>
+            <li>
+                <a href="#users/{{user.username_canonical}}/delete" title="Delete">
+                    Delete</a>
+            </li>
+        </ul>
+
         <img src="{{user.avatar}}" alt="avatar" />
-        {{user.username}}
-    </h3>
 
-    <tabset>
-        <tab>
-            <tab-heading>Profile</tab-heading>
+        <tabset>
+            <tab>
+                <tab-heading>Profile</tab-heading>
 
-            <section>
-                <span>{{user.email}}</span>
+                <section>
+                    <span>{{user.email}}</span>
 
-                <span>Récompenses ? médailles ?</span>
-            </section>
-        </tab>
+                    <span>Récompenses ? médailles ?</span>
+                </section>
+            </tab>
 
-        <tab>
-            <tab-heading>Best Scores</tab-heading>
+            <tab>
+                <tab-heading>Best Scores</tab-heading>
 
-            <section ng-include src="'/views/score/components/results.html'"></section>
-        </tab>
-    </tabset>
-</section>
+                <section ng-include src="'/views/score/components/results.html'"></section>
+            </tab>
+        </tabset>
+    </section>
+</div>

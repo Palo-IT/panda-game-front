@@ -203,12 +203,11 @@ a:focus {
 /*	################################################################
 	SITE WRAPS
 ################################################################# */
-
 #headerwrap {
 	background-color: #00b3fe;
 	min-height: 550px;
-	padding-top: 100px;
-	padding-bottom: 0px;
+	padding-top: 90px;
+	padding-bottom: 20px;
 	text-align: center;
 }
 
@@ -288,7 +287,7 @@ a:focus {
 
 /* Testimonials Wrap */
 #twrap {
-	background: url(../img/t-back.jpg) no-repeat center top;
+	background: url('images/t-back.jpg') no-repeat center top;
 	margin-top: 0px;
 	padding-top:60px;
 	text-align:center;
@@ -334,6 +333,7 @@ a:focus {
 
 /* Footer */
 #footerwrap {
+    margin-top: 60px;
 	padding-top: 60px;
 	padding-bottom: 60px;
 	background: #384452;

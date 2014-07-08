@@ -37,7 +37,7 @@
     <!-- endbuild -->
 </head>
 
-<body>
+<body ng-app="pandaGameFrontApp">
 
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -49,11 +49,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">The Panda Game</a>
+            <a class="navbar-brand" ng-href="#/">The Panda Game</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
-                <li class="active"><a ng-href="#">Home</a></li>
+                <li class="active"><a ng-href="#/">Home</a></li>
                 <li><a ng-href="#/play">Play !</a></li>
                 <li><a ng-href="#/users">Users</a></li>
                 <li><a ng-href="#/scores">Scores</a></li>
@@ -62,6 +62,8 @@
                     <ul class="dropdown-menu">
                         <li><a ng-href="#/logout">Profile</a></li>
                         <li><a ng-href="#/logout">Settings</a></li>
+                        <li><a ng-href="#/about">About</a></li>
+                        <li><a ng-href="#/contact">Contact Us</a></li>
                         <li><a ng-href="#/logout">Logout</a></li>
                     </ul>
                 </li>
@@ -70,75 +72,7 @@
     </div>
 </div>
 
-<!-- *****************************************************************************************************************
- HEADERWRAP
- ***************************************************************************************************************** -->
-<div id="headerwrap">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h3>Show your work with this beautiful theme</h3>
-                <h1>Eyecatching Bootstrap 3 Theme.</h1>
-                <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
-                <h5>More Lorem Ipsum added here too.</h5>
-            </div>
-            <div class="col-lg-8 col-lg-offset-2 himg">
-                <img src="images/vendor/browser.png" class="img-responsive">
-            </div>
-        </div><!-- /row -->
-    </div> <!-- /container -->
-</div><!-- /headerwrap -->
-
-<!-- *****************************************************************************************************************
- SERVICE LOGOS
- ***************************************************************************************************************** -->
-<div id="service">
-    <div class="container">
-        <div class="row centered">
-            <div class="col-md-4">
-                <i class="fa fa-heart-o"></i>
-                <h4>Handsomely Crafted</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
-            </div>
-            <div class="col-md-4">
-                <i class="fa fa-flask"></i>
-                <h4>Retina Ready</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
-            </div>
-            <div class="col-md-4">
-                <i class="fa fa-trophy"></i>
-                <h4>Quality Theme</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
-            </div>
-        </div>
-    </div><! --/container -->
-</div><! --/service -->
-
-<!-- *****************************************************************************************************************
- OUR CLIENTS
- ***************************************************************************************************************** -->
-<div id="cwrap">
-    <div class="container">
-        <div class="row centered">
-            <h3>OUR CLIENTS</h3>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <img src="images/vendor/clients/client01.png" class="img-responsive">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <img src="images/vendor/clients/client02.png" class="img-responsive">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <img src="images/vendor/clients/client03.png" class="img-responsive">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <img src="images/vendor/clients/client04.png" class="img-responsive">
-            </div>
-        </div><! --/row -->
-    </div><! --/container -->
-</div><! --/cwrap -->
+<div ng-view=""></div>
 
 <!-- *****************************************************************************************************************
  FOOTER
@@ -150,6 +84,7 @@
                 <h4>About</h4>
                 <div class="hline-w"></div>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p><a ng-href="#/about">Learn more about us.</a></p>
             </div>
             <div class="col-lg-4">
                 <h4>Social Links</h4>
@@ -163,12 +98,12 @@
                 </p>
             </div>
             <div class="col-lg-4">
-                <h4>Our Bunker</h4>
+                <h4>Our Forest</h4>
                 <div class="hline-w"></div>
                 <p>
-                    Some Ave, 987,<br/>
-                    23890, New York,<br/>
-                    United States.<br/>
+                    3 Rue Scribe,<br/>
+                    75009, Paris,<br/>
+                    France.<br/>
                 </p>
             </div>
 

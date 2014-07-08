@@ -1,17 +1,30 @@
-<section ng-controller='UserCtrl' ng-init="list()">
-    <div>
-        <label>Recherche</label>
-        <input type='text' ng-model='search.username' />
-    </div>
+<div ng-controller='UserCtrl' ng-init="list()">
+    <!-- *****************************************************************************************************************
+         BLUE WRAP
+         ***************************************************************************************************************** -->
+    <div id="blue">
+        <div class="container">
+            <div class="row">
+                <h3>Users</h3>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /blue -->
 
-    <article ng-repeat="user in users | filter:search">
-        <h3>
-            <a href="#users/{{user.username_canonical}}" title="{{user.username}}">
-                <img src="{{user.avatar}}" alt="avatar" />
-                {{user.username}}</a>
-        </h3>
+    <section id="page-content" class="container" ng-controller='UserCtrl' ng-init="list()">
+        <div>
+            <label>Recherche</label>
+            <input type='text' ng-model='search.username' />
+        </div>
 
-        <p>Meilleur score ? plus date ?</p>
-        <p>Inviter dans une partie multi joueur</p>
-    </article>
-</section>
+        <article ng-repeat="user in users | filter:search">
+            <h3>
+                <a href="#users/{{user.username_canonical}}" title="{{user.username}}">
+                    <img src="{{user.avatar}}" alt="avatar" />
+                    {{user.username}}</a>
+            </h3>
+
+            <p>Meilleur score ? plus date ?</p>
+            <p>Inviter dans une partie multi joueur</p>
+        </article>
+    </section>
+</div>

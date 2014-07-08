@@ -1,8 +1,21 @@
-<section ng-controller='ScoreCtrl' ng-init="list()">
-    <div>
-        <label>Recherche</label>
-        <input type='text' ng-model='search.username'/>
-    </div>
+<div ng-controller='ScoreCtrl' ng-init="list()">
+    <!-- *****************************************************************************************************************
+         BLUE WRAP
+         ***************************************************************************************************************** -->
+    <div id="blue">
+        <div class="container">
+            <div class="row">
+                <h3>Scores</h3>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /blue -->
 
-    <section ng-include src="'/views/score/components/results.html'"></section>
-</section>
+    <section id="page-content" class="container">
+        <div>
+            <label>Recherche</label>
+            <input type='text' ng-model='search.username'/>
+        </div>
+
+        <section ng-include src="'/views/score/components/results.html'"></section>
+    </section>
+</div>
