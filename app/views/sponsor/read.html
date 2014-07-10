@@ -1,0 +1,34 @@
+<div ng-controller='SponsorCtrl' ng-init="read()">
+    <div id="blue">
+        <div class="container">
+            <div class="row">
+                <h3>{{ sponsor.name }}</h3>
+            </div>
+        </div>
+    </div>
+
+    <section id="page-content" class="container">
+        <div>
+            <a href="{{ sponsor.website }}" target="_blank" title="Accéder au site de {{ sponsor.name }}">
+                <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="img-responsive" />
+            </a>
+
+            <p>
+                {{ sponsor.description }}
+            </p>
+
+            <a href="{{ sponsor.website }}" target="_blank" title="Accéder au site de {{ sponsor.name }}">
+                Site de {{ sponsor.name }}
+            </a>
+        </div>
+
+        <p>
+            <a href="#/sponsors" title="Voir la liste des Sponsors">
+                Voir tout les Sponsors
+            </a>
+        </p>
+
+
+    </section>
+</div>
+

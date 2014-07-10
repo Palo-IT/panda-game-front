@@ -7,11 +7,12 @@
  * # LoginCtrl
  * Controller of the pandaGameFrontApp
  */
-angular.module('pandaGameFrontApp')
-    .controller('LoginCtrl', function ($scope) {
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
-    });
+
+app.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
+    $scope.awesomeThings = [
+        'HTML5 Boilerplate',
+        'AngularJS',
+        'Karma'
+    ];
+}]);
+

@@ -22,7 +22,7 @@ var app = angular.module('pandaGameFrontApp', [
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'views/home.html',
+            templateUrl: 'views/home/index.html',
             controller: 'HomeCtrl'
         })
         .when('/play', {
@@ -52,6 +52,14 @@ app.config(function ($routeProvider) {
         .when('/login', {
             templateUrl: 'views/login.html',
             controller: 'LoginCtrl'
+        })
+        .when('/sponsors', {
+            templateUrl: 'views/sponsor/list.html',
+            controller: 'SponsorCtrl'
+        })
+        .when('/sponsors/:slug', {
+            templateUrl: 'views/sponsor/read.html',
+            controller: 'SponsorCtrl'
         })
         .otherwise({
             redirectTo: '/'

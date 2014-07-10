@@ -7,11 +7,12 @@
  * # PlayCtrl
  * Controller of the pandaGameFrontApp
  */
-angular.module('pandaGameFrontApp')
-    .controller('PlayCtrl', function ($scope) {
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
-    });
+
+app.controller('PlayCtrl', ['$scope', '$http', function ($scope, $http) {
+    $scope.awesomeThings = [
+        'HTML5 Boilerplate',
+        'AngularJS',
+        'Karma'
+    ];
+}]);
+

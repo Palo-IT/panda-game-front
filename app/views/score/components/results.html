@@ -1,33 +1,33 @@
 <table>
     <thead>
-    <tr>
-        <th ng-if="{{ displayUser }}">User</th>
-        <th>Score</th>
-        <th>Date</th>
-    </tr>
+        <tr>
+            <th ng-if="{{ displayUser }}">User</th>
+            <th>Score</th>
+            <th>Date</th>
+        </tr>
     </thead>
 
     <tbody>
-    <tr ng-repeat="score in scores | filter:search">
-        <td ng-if="{{ displayUser }}">
-            <a href="#users/{{score.user.username_canonical}}/scores" title="User Score history">
-                <img src="{{score.user.avatar}}" alt="avatar" />
-                {{user.username}}</a>
-        </td>
+        <tr ng-repeat="score in scores | filter:search">
+            <td ng-if="{{ displayUser }}">
+                <a href="#users/{{score.user.username_canonical}}/scores" title="User Score history">
+                    <img src="{{score.user.avatar}}" alt="avatar" />
+                    {{user.username}}</a>
+            </td>
 
-        <td>
-            {{score.result}}
-        </td>
+            <td>
+                {{score.result}}
+            </td>
 
-        <td>
-            {{score.creation | date : 'dd/MM/yyyy HH:mm'}}
-        </td>
-    </tr>
+            <td>
+                {{score.creation | date : 'dd/MM/yyyy HH:mm'}}
+            </td>
+        </tr>
     </tbody>
 
     <tfoot>
-    <tr>
-        <td></td>
-    </tr>
+        <tr>
+            <td></td>
+        </tr>
     </tfoot>
 </table>
