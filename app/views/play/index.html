@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="PlayCtrl">
     <!-- *****************************************************************************************************************
          BLUE WRAP
          ***************************************************************************************************************** -->
@@ -11,6 +11,14 @@
     </div><!-- /blue -->
 
     <section id="page-content" class="container">
+        <div class="alert alert-{{ saveScore.status }}" ng-show="saveScore.status">
+            {{ saveScore.message }}
+        </div>
         Game incoming
+        <div>
+            <button class="btn btn-primary" ng-click="saveScore()">
+                <i class="fa fa-refresh margin-right-sm"></i> Generate Score
+            </button>
+        </div>
     </section>
 </div>
