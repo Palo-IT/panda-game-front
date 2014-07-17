@@ -15,7 +15,7 @@ app.controller('UserCtrl', ['$scope', '$routeParams', '$http', function ($scope,
     ];
 
     $scope.list = function() {
-        $http.get('http://dev.panda-game.fr/api/users').success(function(data) {
+        $http.get('http://dev.panda-game.fr/api/users?limit=50').success(function(data) {
             $scope.users = data;
         }).error(function(data, status, headers) {
             console.log(status);

@@ -8,20 +8,26 @@
     </div>
 
     <section id="page-content" class="container">
-        <div>
+        <div class="margin-bottom">
             <label>Recherche</label>
             <input type='text' ng-model='search.username' />
         </div>
 
-        <article ng-repeat="user in users | filter:search">
-            <h3>
-                <a href="#/users/{{user.username_canonical}}" title="{{user.username}}">
-                    <img src="{{user.avatar}}" alt="avatar" />
-                    {{user.username}}</a>
-            </h3>
+        <section class="row">
+            <article class="col-md-4 media" ng-repeat="user in users | filter:search">
+                <a class="pull-left" href="#/users/{{user.username_canonical}}" title="{{user.username}}">
+                    <img src="{{user.avatar}}" alt="avatar" width="50" />
+                </a>
 
-            <p>Meilleur score ? plus date ?</p>
-            <p>Inviter dans une partie multi joueur</p>
-        </article>
+                <div class="media-body">
+                    <h4 class="media-heading">
+                        <a href="#/users/{{user.username_canonical}}" title="{{user.username}}">
+                            {{user.username}}</a>
+                    </h4>
+
+                    <p>Highest score + date - Add friend</p>
+                </div>
+            </article>
+        </section>
     </section>
 </div>

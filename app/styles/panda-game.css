@@ -1,0 +1,192 @@
+/*------------------------------------*\
+    $SPACING
+\*------------------------------------*/
+/***
+ *     .d8888b.                             d8b
+ *    d88P  Y88b                            Y8P
+ *    Y88b.
+ *     "Y888b.   88888b.   8888b.   .d8888b 888 88888b.   .d88b.
+ *        "Y88b. 888 "88b     "88b d88P"    888 888 "88b d88P"88b
+ *          "888 888  888 .d888888 888      888 888  888 888  888
+ *    Y88b  d88P 888 d88P 888  888 Y88b.    888 888  888 Y88b 888
+ *     "Y8888P"  88888P"  "Y888888  "Y8888P 888 888  888  "Y88888
+ *               888                                          888
+ *               888                                     Y8b d88P
+ *               888                                      "Y88P"
+ */
+/* Margins */
+.margin- {
+    margin: 0;
+}
+/* Margins - Default */
+.margin-top {
+    margin-top: 20px;
+}
+.margin-right {
+    margin-right: 20px;
+}
+.margin-bottom {
+    margin-bottom: 20px;
+}
+.margin-left {
+    margin-left: 20px;
+}
+.margin-x {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.margin-y {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.margin-xy {
+    margin: 20px;
+}
+/* Margins - Small */
+.margin-top-sm {
+    margin-top: 10px;
+}
+.margin-right-sm {
+    margin-right: 5px;
+}
+.margin-bottom-sm {
+    margin-bottom: 10px;
+}
+.margin-left-sm {
+    margin-left: 5px;
+}
+.margin-x-sm {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.margin-y-sm {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.margin-xy-sm {
+    margin: 10px;
+}
+/* Margins - XSmall */
+.margin-top-xs {
+    margin-top: 5px;
+}
+.margin-right-xs {
+    margin-right: 5px;
+}
+.margin-bottom-xs {
+    margin-bottom: 5px;
+}
+.margin-left-xs {
+    margin-left: 5px;
+}
+.margin-x-xs {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.margin-y-xs {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.margin-xy-xs {
+    margin: 5px;
+}
+/* Margins - Large */
+.margin-top-lg {
+    margin-top: 40px;
+}
+.margin-bottom-lg {
+    margin-bottom: 40px;
+}
+.margin-y-lg {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* Margins - null */
+.margin-top- {
+    margin-top: 0px;
+}
+.margin-bottom- {
+    margin-bottom: 0px;
+}
+.margin-left- {
+    margin-left: 0px;
+}
+.margin-right- {
+    margin-right: 0px;
+}
+.margin-x- {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.margin-y- {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/* Padding - Default */
+.padding-left {
+    padding-left: 20px;
+}
+.padding-right {
+    padding-right: 20px;
+}
+.padding-bottom {
+    padding-bottom: 20px;
+}
+.padding-top {
+    padding-top: 20px;
+}
+.padding-x {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.padding-y {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.padding-xy {
+    padding: 20px;
+}
+/* Padding - Small */
+.padding-sm {
+    padding: 5px 10px;
+}
+.padding-y-sm {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+/* Padding - none */
+.padding- {
+    padding: 0 !important;
+}
+.padding-x- {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.padding-y- {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.padding-bottom- {
+    padding-bottom: 0px;
+}
+.padding-top- {
+    padding-top: 0px;
+}
+.padding-left-, .no-padding-left {
+    padding-left: 0px;
+}
+.padding-right-, .no-padding-right {
+    padding-right: 0px;
+}
+
+
+
+
+
+
+
+
+
+.media:first-child {
+    margin-top: 15px;
+}
