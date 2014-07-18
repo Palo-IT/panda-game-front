@@ -31,4 +31,29 @@ app.controller('SponsorCtrl', ['$scope', '$routeParams', '$http', function ($sco
             console.log(headers);
         });
     };
+
+    $scope.getSponsors = function(limit, offset) {
+        var defaultLimit = 3;
+        var defaultOffset = 0;
+
+        if (!limit)
+            limit = defaultLimit;
+
+        if (!offset)
+            offset = defaultOffset;
+
+        alert('http://dev.panda-game.fr/api/sponsors?limit=' + limit + '&offset=' + offset);
+
+        $http.get('http://dev.panda-game.fr/api/sponsors?limit=' + limit + '&offset=' + offset).success(function(data) {
+            $scope.$apply( function () {
+                $scope.sponsors = data;
+                $scope.currentLimit = limit;
+                $scope.currentOffset = offset;
+            });
+
+        }).error(function(data, status, headers) {
+            console.log(status);
+            console.log(headers);
+        });
+    };
 }]);

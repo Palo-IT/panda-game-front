@@ -13,13 +13,4 @@ app.controller('HomeCtrl', ['$scope', '$http', function ($scope, $http) {
       'AngularJS',
       'Karma'
     ];
-
-    $scope.index = function() {
-        $http.get('http://dev.panda-game.fr/api/sponsors?limit=5').success(function(data) {
-            $scope.sponsors = data;
-        }).error(function(data, status, headers) {
-            console.log(status);
-            console.log(headers);
-        });
-    };
 }]);

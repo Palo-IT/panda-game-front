@@ -1,7 +1,13 @@
-<section class="row">
+<section class="row sponsors" ng-controller="SponsorCtrl" ng-init="getSponsors()">
     <article class="col-md-4" ng-repeat="sponsor in sponsors">
         <a href="#/sponsors/{{sponsor.slug}}" title="{{ sponsor.name }}">
-            <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="img-responsive" />
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="img-responsive" /><br />
+            {{ sponsor.name | words:3 }}"
         </a>
     </article>
+
+    <input type="hidden" name="sponsorsLimit" />
+    <input type="hidden" name="sponsorsOffset" />
+
+    <button ng-click="getSponsors(currentLimit, currentOffset + 3)">next</button>
 </section>

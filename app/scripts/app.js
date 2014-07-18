@@ -15,7 +15,8 @@ var app = angular.module('pandaGameFrontApp', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'truncate'
   ]);
 
 
